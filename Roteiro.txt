@@ -1,0 +1,16 @@
+1) Criar o projeto
+2) Criar a ConnectionString
+3) Criar a model ListaModel.cs contendo os campos que iremos criar no banco de dados
+
+4) Configurar o DbContext:
+dotnet add package Microsoft.EntityFrameworkCore --version 8.0.16
+
+5) Adicionar o serviço em Program.cs para conexão com o MySQL
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.3
+
+6) Instalar o package para trabalhar com a Migration
+dotnet tool install --global dotnet-ef --version 8.0.16
+
+7) Gerar a migration: 
+			dotnet ef migration add NomeMigration
+			dotnet ef database update
